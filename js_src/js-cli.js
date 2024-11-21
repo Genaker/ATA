@@ -24,7 +24,6 @@ async function main() {
         // Fetch the top-performing theater for the selected date
         const topTheater = await Sale.getTopTheaterByDate(selectedDate);
 
-        // Display the result
         if (topTheater) {
             console.log(
                 `Theater with the most sales on ${selectedDate}: ${topTheater.theater} (\$${topTheater.total_sales} sales in ${topTheater.counter} orders)`
@@ -37,5 +36,4 @@ async function main() {
     }
 }
 
-// Run the CLI
 main();
