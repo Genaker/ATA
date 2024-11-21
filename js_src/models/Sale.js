@@ -34,8 +34,11 @@ export const Sale = {
                 [date]
             );
             return rows[0] || null;
-        } finally {
-            await connection.end();
+        } catch (err) {
+            console.log("DB ERROR: " + err);
         }
+    
+        await connection.end();
+
     },
 };

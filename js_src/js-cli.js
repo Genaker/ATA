@@ -11,7 +11,6 @@ async function main() {
             return;
         }
 
-        // Prompt the user to select a date
         const { selectedDate } = await inquirer.prompt([
             {
                 type: 'list',
@@ -34,6 +33,7 @@ async function main() {
     } catch (error) {
         console.error('Error:', error.message);
     }
+    process.exit();
 }
 
 main();
